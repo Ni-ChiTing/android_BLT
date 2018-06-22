@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".control">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:isScrollContainer="true"
+            android:id="@+id/text_dis"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="10dp"
+            android:ems="10"
+            android:enabled="true"
+            android:inputType="none"
+            android:scrollbars="vertical"
+            android:text="123453" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/motorinput"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/text_dis"
+            android:layout_margin="10dp">
+
+            <android.support.design.widget.TextInputEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="轉速" />
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/re"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_alignStart="@+id/list1"
+            android:layout_below="@+id/motorinput"
+            android:layout_marginBottom="63dp"
+            android:onClick="reclick"
+            android:text="上一頁" />
+
+        <Button
+            android:id="@+id/send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/list1"
+            android:layout_below="@+id/motorinput"
+            android:onClick="sendclick"
+            android:text="送出" />
+
+        <ListView
+            android:id="@+id/list1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:divider="@android:color/holo_blue_dark"
+            android:dividerHeight="1dp"
+            tools:layout_editor_absoluteX="10dp"
+            tools:layout_editor_absoluteY="10dp">
+
+        </ListView>
+    </RelativeLayout>
+
+</android.support.constraint.ConstraintLayout>
